@@ -19,7 +19,7 @@ You will be able to
 
 Covariance is used to measure **how much variables change *together* **, and it is calculated using the formula:
 
-![](Co-variance.jpg)
+![](co-variance.jpg)
 
 
 
