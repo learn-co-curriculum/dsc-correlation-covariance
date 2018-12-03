@@ -250,7 +250,7 @@ Here is some more (rather funny examples) of how correlation analysis may lead t
 <img src="cage.png" width=600>
 
 
-Internet is full of other sunny funny correlations, do a quick Google search and you'll come across lots of them. So the key takeaway here is that covariance and correlation analysis should be used with care. A high correlation may indicate some sort of __casual relationship__ between variables. It should not be taken as a __cause-effect__ 
+Internet is full of other funny correlations, do a quick Google search and you'll come across lots of them. So the key takeaway here is that covariance and correlation analysis should be used with care. A high correlation may indicate some sort of __casual relationship__ between variables. It should not be taken as a __cause-effect__ 
 scenario. 
 
 <img src="joke.png" width=600>
