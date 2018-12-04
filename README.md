@@ -35,7 +35,7 @@ mu_y = the mean of the dependent variable y
 sigma(xy) = Calculated covariance
 ```
 
-Note: For sample correlation , we divide by (n-1) due to the principle called Bessel's correction. [Here is a mathematical proof for this.](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We shall visit this point again later in the course to see its impact on the outcome. A general proof for covariance is available [here](https://math.tutorvista.com/statistics/covariance.html)
+Note: For sample covariance , we divide by (n-1) due to the principle called Bessel's correction. [Here is a mathematical proof for this.](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We shall visit this point again later in the course to see its impact on the outcome. A general proof for covariance is available [here](https://math.tutorvista.com/statistics/covariance.html)
 
 ### Interpreting Covariance values 
 
