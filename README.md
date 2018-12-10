@@ -33,7 +33,6 @@ $$\sigma^2 = \frac{\sum(x-\mu)^2}{n}$$
 - $\mu$ is the mean of the data points. 
 - $n$ is the total number of data points. 
 
-*While calculating a sample variance in order to estimate a population variance, the denominator of the variance equation becomes n - 1. This removes bias from the estimation, as it prohibits the researcher from underestimating the population variance.*
 
 Following illustration summarizes how spread of data around mean (10) relates to the variance for different variables. In general, you would notice that higher variance simply relates to a larger spread of the distribution of observations around the mean value. 
 
