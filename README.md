@@ -1,5 +1,5 @@
 
-# Understanding Covariance and Correlation
+# Covariance and Correlation
 
 ## Introduction 
 
