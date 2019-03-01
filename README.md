@@ -226,7 +226,7 @@ You may have come across the saying: **“correlation is not causation”** or *
 What do we mean by saying this?
 
 Causation takes a step further than correlation.
-> Any change in the value of one variable will cause a change in the value of another variable, which means one variable makes the other happen. It is also referred as __cause and effect__.
+> Any change in the value of one variable will cause a change in the value of another variable, which means one variable causes the other one to happen. It is also referred as __cause and effect__.
 
 Let's try to understand this with an example.
 
@@ -281,7 +281,7 @@ What is important to note is here that, where correlation does not impy causatio
 - Correlation is not causation
 
 
-**IMPORTANT NOTE:** The variance formula used in this lesson considers $X$ and $Y$ to be population variables.  For samples , we divide by (n-1), instead of n due to the principle called Bessel's correction. [Here is a mathematical proof for this.](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We will visit this point again later in the course to explore it in greater details. 
+**IMPORTANT NOTE:** The variance formula used in this lesson considers $X$ and $Y$ to be population variables.  For samples , we divide by (n-1), instead of n due to the principle called Bessel's correction. [Here is a mathematical proof for this](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We will visit this point again later in the course to explore it in greater details. 
 
 
 ## Summary
