@@ -105,7 +105,7 @@ This is where the concept of correlation comes in.
 Let's consider another ice cream Vendor C to reinforce this idea. The mean sales amount for this vendor is 132,000, and the covariance between Vendor A and C is 132,000, which is considerably higher than the covariance of 106,800 which we've seen before. Does this mean the positive relationship between A and C is stronger? We need the correlation here to answer this question!
 
 | Month   |   Vendor A  | Vendor B | Vendor C |
-|----------|-----|-----|
+|----------|-----|-----|-------|
 |  January | 100 |220|900 |
 | February | 200 |400|800 |
 | March    | 300 |600|500 |
@@ -167,7 +167,7 @@ Here are some example of pearson correlation calculations as scatter plots.
 ** Let's go back to our ice cream example**:
 
 | Month   |   Vendor A  | Vendor B | Vendor C |
-|----------|-----|-----|
+|----------|-----|-----|-------|
 |  January | 100 |220|900 |
 | February | 200 |400|800 |
 | March    | 300 |600|500 |
