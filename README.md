@@ -39,22 +39,6 @@ You can calculate that, with a mean of 400 over these 5 months, the variance of 
 
 Now, let's take this further and see how this relates to **covariance**. 
 
-
-```python
-import numpy as np
-x =np.asarray([100,200,300,500,900])
-np.sum((x-(100+200+300+500+900)/5)**2)/5
-np.var(x)
-#np.sqrt(80000)
-```
-
-
-
-
-    80000.0
-
-
-
 ## Covariance
 
 In some cases you'll want to look at **two random variables** to get an idea on how they **change together**. In statictics, when trying to figure out how two random variables **vary together**, you can use the so-called **covariance** between these variables.
@@ -178,7 +162,7 @@ If two variables have a correlation of +0.9,  this means the change in one item 
 
 Here are some example of pearson correlation calculations as scatter plots. 
 
-![](correx.svg)
+![](images/correx.svg)
 
 ** Let's go back to our ice cream example**:
 
@@ -214,7 +198,7 @@ Let's take a deep dive into an Ice Cream Vendor's sales data. Now, we're going t
 
 And here is the same data as a Scatter Plot:
 
-<img src="scatt.svg" width=400>
+<img src="images/scatt.svg" width=400>
 
 Just by looking at the plot, you can easily see that hotter weather goes along with higher ice cream sales. The relationship is good but not perfect.
 The correlation for this example is 0.9575 which indicates a very strong positive relationship.
@@ -234,7 +218,7 @@ Let's try to understand this with an example.
 
 Suppose for the above ice cream sales example, we now have some extra data on number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatter plot and see that these two also related to each other. Mind blown... Is ice cream turning people into murderers?
 
-<img src="ice1.png" width=400>
+<img src="images/ice1.png" width=400>
 
 #### Example 1: "Ice cream sales is correlated with number of homicides in New York" 
 
@@ -242,7 +226,7 @@ For our example, its actually the  weather as a hidden factor which is causing b
 
 This is reflected in the image below:
 
-<img src="cc.png" width=300>
+<img src="images/cc.png" width=300>
 
 **Just after finding correlation, we shouldn't draw the conclusion too quickly. Instead we should take time to find other underlying factors as correlation is just the first step. Find the hidden factors, verify if they are correct and then conclude.**
 
@@ -253,14 +237,14 @@ Here is another (rather funny examples) of how correlation analysis may lead to 
 #### Example 2: Number of Nicholas Cage movie releases correlates with people drowning in pools
 
 
-<img src="cage.png" width=700>
+<img src="images/cage.png" width=700>
 
 So, how about this chart?
 
 Internet is full of other funny correlations, do a quick Google search and you'll come across lots of them. So the key takeaway here is that covariance and correlation analysis should be used with care. A high correlation may indicate some sort of __causal relationship__ between variables. It should not be taken as a __cause-effect__ 
 scenario. 
 
-<img src="joke.png" width=600>
+<img src="images/joke.png" width=600>
 
 #### Example 3: Our very own ice cream example
 
