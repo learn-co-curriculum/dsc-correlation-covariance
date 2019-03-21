@@ -3,7 +3,7 @@
 
 ## Introduction 
 
-In this lesson, you'll learn how the **variance** of a random variable is used to calculate **covariance** and **correlation** as key measures used in statistics to find causal relationships between random variables. Based on these measures, you can find out if two variables are associated with each other, and to what extent. This lesson will help you develop a conceptual understanding, necessary calculations and some precautions while using these measures. 
+In this lesson, you'll learn how the **variance** of a random variable is used to calculate **covariance** and **correlation** as key measures used in statistics to find causal relationships between random variables. Based on these measures, you can find out if two variables are associated with each other, and to what extent. This lesson will help you develop a conceptual understanding, necessary calculations, and some precautions while using these measures. 
 
 ## Objectives
 
@@ -41,7 +41,7 @@ Now, let's take this further and see how this relates to **covariance**.
 
 ## Covariance
 
-In some cases you'll want to look at **two random variables** to get an idea on how they **change together**. In statictics, when trying to figure out how two random variables **vary together**, you can use the so-called **covariance** between these variables.
+In some cases, you'll want to look at **two random variables** to get an idea on how they **change together**. In statictics, when trying to figure out how two random variables **vary together**, you can use the so-called **covariance** between these variables.
 
 Covariance calculation plays a major role in a number of advanced machine learning algorithms like dimensionality reduction, predictive analyses, etc.
 
@@ -121,7 +121,7 @@ Because of this, it is important to normalize this degree of variation into a st
 The term "correlation" refers to a relationship or association between variables. In almost any business, it is useful to express one quantity in terms of its relationship with others. For example: 
 - Sales might increase when the marketing department spends more on TV advertisements
 - Customer's average purchase amount on an e-commerce website might depend on a number of factors related to that customer, e.g. location, age group, gender etc.
-- Social media activity and website clicks might be be associated with revenue that a digital publisher makes. etc.
+- Social media activity and website clicks might be associated with revenue that a digital publisher makes. etc.
 
 Correlation is the first step to understanding these relationships and subsequently building better business and statistical models.
 
@@ -157,10 +157,10 @@ So just like in the case of covariance,  $X$ and $Y$ are two random variables ha
 
 You'll often see patterns or relationships in scatter plots. Pearson Correlation, which is a linear measure can be identified through a scatter plot by inspecting the "linearity of association" between two variables. 
 
-If two variables have a correlation of +0.9,  this means the change in one item results in an almost similar change to another item. A correlation value of -0.9 means that the change is one variable results as an opposite change in the other variable. A pearson correlation near 0 would be no effect. 
+If two variables have a correlation of +0.9,  this means the change in one item results in an almost similar change to another item. A correlation value of -0.9 means that the change is one variable results as an opposite change in the other variable. A Pearson correlation near 0 would be no effect. 
 
 
-Here are some example of pearson correlation calculations as scatter plots. 
+Here are some example of Pearson correlation calculations as scatter plots. 
 
 ![](images/correx.svg)
 
@@ -210,28 +210,28 @@ You may have come across the saying: **“correlation is not causation”** or *
 What do we mean by saying this?
 
 Causation takes a step further than correlation.
-> Any change in the value of one variable will cause a change in the value of another variable, which means one variable causes the other one to happen. It is also referred as __cause and effect__.
+> Any change in the value of one variable will cause a change in the value of another variable, which means one variable causes the other one to happen. It is also referred to as __cause and effect__.
 
 Let's try to understand this with an example.
 
 ### Consider Hidden Factors
 
-Suppose for the above ice cream sales example, we now have some extra data on number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatter plot and see that these two also related to each other. Mind blown... Is ice cream turning people into murderers?
+Suppose for the above ice cream sales example, we now have some extra data on the number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatterplot and see that these two also related to each other. Mind blown... Is ice cream turning people into murderers?
 
 <img src="images/ice1.png" width=400>
 
-#### Example 1: "Ice cream sales is correlated with number of homicides in New York" 
+#### Example 1: "Ice cream sales are correlated with the number of homicides in New York" 
 
-For our example, its actually the  weather as a hidden factor which is causing both these events. It is actually causing the rise in ice cream sales and homicides. As in summer people usually go out, enjoy nice sunny day and chill themselves with ice creams. So when it’s sunny, wide range of people are outside and there is a wider selection of victims for predators. There is no causal relationship between the ice cream and rate of homicide, sunny weather is bringing both the factors together. We can say that ice cream sales and homicide rate have a __causal relationship__ with weather.
+For our example, its actually the weather as a hidden factor which is causing both these events. It is actually causing the rise in ice cream sales and homicides. As in summer people usually go out, enjoy a nice sunny day and chill themselves with ice creams. So when it’s sunny, a wide range of people are outside and there is a wider selection of victims for predators. There is no causal relationship between the ice cream and rate of homicide, sunny weather is bringing both the factors together. We can say that ice cream sales and homicide rate have a __causal relationship__ with weather.
 
 This is reflected in the image below:
 
 <img src="images/cc.png" width=300>
 
-**Just after finding correlation, we shouldn't draw the conclusion too quickly. Instead we should take time to find other underlying factors as correlation is just the first step. Find the hidden factors, verify if they are correct and then conclude.**
+**Just after finding the correlation, we shouldn't draw the conclusion too quickly. Instead, we should take time to find other underlying factors as correlation is just the first step. Find the hidden factors, verify if they are correct and then conclude.**
 
 
-Here is another (rather funny examples) of how correlation analysis may lead to inconceivable findings.
+Here are some other (rather funny) examples of how correlation analysis may lead to inconceivable findings.
 
 
 #### Example 2: Number of Nicholas Cage movie releases correlates with people drowning in pools
@@ -241,7 +241,7 @@ Here is another (rather funny examples) of how correlation analysis may lead to 
 
 So, how about this chart?
 
-Internet is full of other funny correlations, do a quick Google search and you'll come across lots of them. So the key takeaway here is that covariance and correlation analysis should be used with care. A high correlation may indicate some sort of __causal relationship__ between variables. It should not be taken as a __cause-effect__ 
+The internet is full of other funny correlations, do a quick Google search and you'll come across lots of them. So the key takeaway here is that covariance and correlation analysis should be used with care. A high correlation may indicate some sort of __causal relationship__ between variables. It should not be taken as a __cause-effect__ 
 scenario. 
 
 <img src="images/joke.png" width=600>
@@ -265,10 +265,8 @@ What is important to note is here that, where correlation does not impy causatio
 - Correlation is not causation
 
 
-**IMPORTANT NOTE:** The variance formula used in this lesson considers $X$ and $Y$ to be population variables.  For samples , we divide by (n-1), instead of n due to the principle called Bessel's correction. [Here is a mathematical proof for this](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We will visit this point again later in the course to explore it in greater details. 
+**IMPORTANT NOTE:** The variance formula used in this lesson considers $X$ and $Y$ to be population variables.  For samples, we divide by (n-1), instead of n due to the principle called Bessel's correction. [Here is a mathematical proof for this](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We will visit this point again later in the course to explore it in greater details. 
 
 
 ## Summary
-In this lesson, you learned how to compute variance of random variables as a measure of deviation from the mean. Them you learned how this measure can be used to first calculate covariance, and then correlation to analyze how two variables change together. You learned the formulas for calculating these measures and you were provided with mathematical proofs of these formulas. Next, you'll learn how you can use correlation analysis to run a __regression analysis__.
-
-
+In this lesson, you learned how to compute the variance of random variables as a measure of deviation from the mean. Them you learned how this measure can be used to first calculate covariance, and the correlation to analyze how two variables change together. You learned the formulas for calculating these measures and you were provided with mathematical proofs of these formulas. Next, you'll learn how you can use correlation analysis to run a __regression analysis__.
