@@ -41,7 +41,7 @@ Now, let's take this further and see how this relates to **covariance**.
 
 ## Covariance
 
-In some cases, you'll want to look at **two random variables** to get an idea on how they **change together**. In statictics, when trying to figure out how two random variables **vary together**, you can use the so-called **covariance** between these variables.
+In some cases, you'll want to look at **two random variables** to get an idea on how they **change together**. In statistics, when trying to figure out how two random variables **vary together**, you can use the so-called **covariance** between these variables.
 
 Covariance calculation plays a major role in a number of advanced machine learning algorithms like dimensionality reduction, predictive analyses, etc.
 
