@@ -162,7 +162,8 @@ If two variables have a correlation of +0.9,  this means the change in one item 
 
 Here are some example of Pearson correlation calculations as scatter plots. 
 
-![](images/correx.svg)
+<img src="images/correlation.png" width="500">
+
 
 ** Let's go back to our ice cream example**:
 
@@ -198,7 +199,7 @@ Let's take a deep dive into an Ice Cream Vendor's sales data. Now, we're going t
 
 And here is the same data as a Scatter Plot:
 
-<img src="images/scatt.svg" width="400">
+<img src="images/ice.png" width="450">
 
 Just by looking at the plot, you can easily see that hotter weather goes along with higher ice cream sales. The relationship is good but not perfect.
 The correlation for this example is 0.9575 which indicates a very strong positive relationship.
@@ -218,7 +219,7 @@ Let's try to understand this with an example.
 
 Suppose for the above ice cream sales example, we now have some extra data on the number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatterplot and see that these two also related to each other. Mind blown... Is ice cream turning people into murderers?
 
-<img src="images/ice1.png" width="400">
+<img src="images/ice_murder.png" width="450">
 
 #### Example 1: "Ice cream sales are correlated with the number of homicides in New York" 
 
@@ -226,7 +227,7 @@ For our example, its actually the weather as a hidden factor which is causing bo
 
 This is reflected in the image below:
 
-<img src="images/cc.png" width="300">
+<img src="images/hidden_factor.png" width="800">
 
 **Just after finding the correlation, we shouldn't draw the conclusion too quickly. Instead, we should take time to find other underlying factors as correlation is just the first step. Find the hidden factors, verify if they are correct and then conclude.**
 
