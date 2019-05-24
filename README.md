@@ -60,7 +60,6 @@ $$\sigma_{XY} = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i -\mu_x)(y_i - \mu_y)
 
 > You can see that the formula calculates the variance of $X$ and $Y$ by multiplying the variance of each of their corresponding elements. Hence the term **CO-variance**.
 
-A general proof for covariance is available [here](https://math.tutorvista.com/statistics/covariance.html).
 
 **Back to our ice cream sales example**:
 
