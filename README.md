@@ -257,7 +257,7 @@ What is important to note is here that, where correlation does not imply causati
 
 ## Key Takeaways
 - Correlation is dimensionless, i.e. it is a unit-free measure of the relationship between variables. 
-- Correlation is a normalized form of covariance and exists between [0,1]
+- Correlation is a normalized form of covariance and exists between [-1,1]
 - Correlation is not causation
 
 
