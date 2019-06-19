@@ -22,7 +22,7 @@ The formula for calculating variance as shown below:
 $$\sigma^2 = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i-\mu)^2$$
 
 - $x$ represents an individual data points
-- $\mu $ is the sample mean of the data points
+- $\mu $ is the mean of the data points
 - $n$ is the total number of data points 
 
 **Example**: let's consider the monthly ice cream sales for a small ice cream vendor in NYC (January-May):
