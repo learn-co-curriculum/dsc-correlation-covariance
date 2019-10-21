@@ -3,19 +3,19 @@
 
 ## Introduction 
 
-In this lesson, you'll learn how the **variance** of a random variable is used to calculate **covariance** and **correlation** as key measures used in statistics to find causal relationships between random variables. Based on these measures, you can find out if two variables are associated with each other, and to what extent. This lesson will help you develop a conceptual understanding, necessary calculations, and some precautions while using these measures. 
+In this lesson, you'll learn how the **variance** of a variable is used to calculate **covariance** and **correlation** as key measures used in statistics to find causal relationships between variables. Based on these measures, you can find out if two variables are associated with each other, and to what extent. This lesson will help you develop a conceptual understanding, necessary calculations, and some precautions while using these measures. 
 
 ## Objectives
 
 You will be able to:
 
-* Understand and calculate covariance and correlation between two random variables
-* Visualize and interpret the results of covariance and correlation
-* Explain what is meant by the popular phrase "correlation does not imply causation"
+- Distinguish between correlation and causation 
+- Interpret correlation and its relationship to covariance  
+- Calculate covariance and correlation  
 
 ## Variance
 
-Earlier in the course, you learned about __variance__ (represented by $\sigma^2$) as a measure of dispersion for continuous random variables from its expected mean value. Let's quickly revisit this, as variance formula plays a key role while calculating covariance and correlation measures.
+In an earlier lesson, you learned about __variance__ (represented by $\sigma^2$) as a measure of dispersion for continuous variables from its expected mean value. Let's quickly revisit this, as variance formula plays a key role while calculating covariance and correlation measures.
 
 The formula for calculating variance as shown below:
 
@@ -25,7 +25,7 @@ $$\sigma^2 = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i-\mu)^2$$
 - $\mu $ is the mean of the data points
 - $n$ is the total number of data points 
 
-**Example**: let's consider the monthly ice cream sales for a small ice cream vendor in NYC (January-May):
+**Example**: Let's consider the monthly ice cream sales for a small ice cream vendor in NYC (January-May):
 
 | Month   |   Amount  |
 |----------|-----|
@@ -41,12 +41,12 @@ Now, let's take this further and see how this relates to **covariance**.
 
 ## Covariance
 
-In some cases, you'll want to look at **two random variables** to get an idea on how they **change together**. In statistics, when trying to figure out how two random variables **vary together**, you can use the so-called **covariance** between these variables.
+In some cases, you'll want to look at **two variables** to get an idea about how they **change together**. In statistics, when trying to figure out how two variables **vary together**, you can use the **covariance** between these variables.
 
 Covariance calculation plays a major role in a number of advanced machine learning algorithms like dimensionality reduction, predictive analyses, etc.
 
-### Calculating Covariance
-If you have $X$ and $Y$, two random variables having $n$ elements each. You can calculate covariance ($\sigma_{xy}$) between these two variables by using the formula:
+### Calculating covariance
+If you have $X$ and $Y$, two variables having $n$ elements each. You can calculate covariance ($\sigma_{xy}$) between these two variables by using the formula:
 
 $$\sigma_{XY} = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i -\mu_x)(y_i - \mu_y)$$
 
@@ -58,7 +58,7 @@ $$\sigma_{XY} = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i -\mu_x)(y_i - \mu_y)
 - $\mu_y$ = mean of the dependent variable $Y$
 
 
-> You can see that the formula calculates the variance of $X$ and $Y$ by multiplying the variance of each of their corresponding elements. Hence the term **CO-variance**.
+> You can see that the formula calculates the variance of $X$ and $Y$ by multiplying the variance of each of their corresponding elements. Hence the term **covariance**.
 
 
 **Back to our ice cream sales example**:
@@ -93,13 +93,14 @@ Covariance values range from positive infinity to negative infinity.
 
 Looking back at our ice cream example, it is no surprise that you found a positive covariance there. While the sales amounts are different, it is clear that when sales went up for Vendor A, they also went up for Vendor B. 
 
-You'll immediately notice the main shortcoming of covariance: because it ranges between negative and positive infinity, it only tells us when 2 variables are negatively or positively related. It doesn't tell us anything about to what **extent** they are negative or positively related. This makes interpretation difficult and comparing covariances to each other impossible. 
+You'll immediately notice the main shortcoming of covariance: because it ranges between negative and positive infinity, it only tells us when two variables are inversely or positively related. It doesn't tell us anything about to what **extent** they are inversely or positively related. This makes interpretation difficult and comparing covariances to each other impossible. 
 
-Assume you have four different variables a, b, p and q. Next, let's say you can have $ Cov(a, b)  = 3.6$ and $Cov(p, q) = 9$. These covariance values tell us that these pairs are positively associated, but it is difficult to tell whether the relationship between a and b is stronger than p and q without looking at the **means and distributions of these variables**.
+Assume you have four different variables `a`, `b`, `p`, and `q`. Next, let's say you can have $ Cov(a, b)  = 3.6$ and $Cov(p, q) = 9$. These covariance values tell us that these pairs are positively associated, but it is difficult to tell whether the relationship between `a` and `b` is stronger than `p` and `q` without looking at the **means and distributions of these variables**.
 
 This is where the concept of correlation comes in.
 
-> Correlation is calculated by **standardizing covariance** by some measure of variability in the data, it produces a quantity that has intuitive interpretations and consistent scale.
+> Correlation is calculated by **standardizing covariance** by some measure of variability in the data. It produces a quantity that has intuitive interpretations and consistent scale. 
+
 
 Let's consider another ice cream Vendor C to reinforce this idea. The mean sales amount for this vendor is 1,120, and the covariance between Vendor A and C is 132,000, which is considerably higher than the covariance of 106,800 which we've seen before. Does this mean the positive relationship between A and C is stronger? We need the correlation here to answer this question!
 
@@ -125,7 +126,7 @@ The term "correlation" refers to a relationship or association between variables
 Correlation is the first step to understanding these relationships and subsequently building better business and statistical models.
 
 
-### Pearson's Correlation Coefficient $r$
+### Pearson's correlation coefficient ( $r$ )
 
 __Pearson Correlation Coefficient__, $r$, also called the __linear correlation coefficient__, measures the strength and the direction of a __linear relationship__ between two variables. This coefficient quantifies the degree to which a relationship between two variables can be described by a line. 
 
@@ -134,13 +135,13 @@ __Pearson Correlation Coefficient__, $r$, also called the __linear correlation c
 
 
 
-### Calculating Correlation Coefficient
+### Calculating correlation coefficient
 
 Pearson Correlation ($r$) is calculated using following formula :
 
 $$ r = \frac{\sum_{i=1}^{n}(x_i -\mu_x)(y_i - \mu_y)} {\sqrt{\sum_{i=1}^{n}(x_i - \mu_x)^2 \sum_{i=1}^{n}(y_i-\mu_y)^2}}$$
 
-So just like in the case of covariance,  $X$ and $Y$ are two random variables having n elements each. 
+So just like in the case of covariance,  $X$ and $Y$ are two variables having $n$ elements each. 
 
 
 - $x_i$ = ith element of variable $X$
@@ -150,13 +151,13 @@ So just like in the case of covariance,  $X$ and $Y$ are two random variables ha
 - $\mu_y$ = mean of the dependent variable $Y$
 - $r$ = Calculated Pearson Correlation
 
-### Interpreting Correlation values
+### Interpreting correlation values
 
 > _The Pearson Correlation formula always gives values in a range between -1 and 1_
 
-You'll often see patterns or relationships in scatter plots. Pearson Correlation, which is a linear measure can be identified through a scatter plot by inspecting the "linearity of association" between two variables. 
+You'll often see patterns or relationships in scatter plots. Pearson correlation, which is a linear measure can be identified through a scatter plot by inspecting the "linearity of association" between two variables. 
 
-If two variables have a correlation of +0.9,  this means the change in one item results in an almost similar change to another item. A correlation value of -0.9 means that the change is one variable results as an opposite change in the other variable. A Pearson correlation near 0 would be no effect. 
+If two variables have a correlation of +0.9,  this means the change in one item results in an almost similar change to another item. A correlation value of -0.9 means that the change is one variable results in an opposite change in the other variable. A Pearson correlation near 0 would be no effect. 
 
 
 Here are some example of Pearson correlation calculations as scatter plots. 
@@ -174,11 +175,11 @@ Here are some example of Pearson correlation calculations as scatter plots.
 | April    | 500 |900|1400 |
 | May      | 900 |1300|2000 |
 
-Recall that Cov(A,C) was higher than Cov(A, B). Using the formula for correlation coefficient, Vendor A and B have a correlation coefficient of 0.9888 where Vendor A and C have a **lower** correlation coefficient of 0.8858!
+Recall that $Cov(A, C)$ was higher than $Cov(A, B)$. Using the formula for correlation coefficient, vendors A and B have a correlation coefficient of 0.9888 whereas vendors A and C have a **lower** correlation coefficient of 0.8858!
 
 ** Ice cream and the weather:**
 
-Let's take a deep dive into an Ice Cream Vendor's sales data. Now, we're going to look at the relationship between the average daily temperature and the daily profit on 12 days in April (the degrees are on the Celsius scale):
+Let's take a deep dive into an ice cream vendor's sales data. Now, we're going to look at the relationship between the average daily temperature and the daily profit on 12 days in April (the degrees are on the Celsius scale):
 
 
 | Temp (°C) |   Ice Cream Sales (USD) |
@@ -196,31 +197,32 @@ Let's take a deep dive into an Ice Cream Vendor's sales data. Now, we're going t
 |22.6|	445|
 |17.2|	408|
 
-And here is the same data as a Scatter Plot:
+And here is the same data as a scatter plot:
 
 <img src="images/ice.png" width="450">
 
 Just by looking at the plot, you can easily see that hotter weather goes along with higher ice cream sales. The relationship is good but not perfect.
 The correlation for this example is 0.9575 which indicates a very strong positive relationship.
 
-## Correlation is not Causation
+## Correlation is not causation
 
 You may have come across the saying: **“correlation is not causation”** or **“correlation does not imply causation”**. 
 
-What do we mean by saying this?
+What do we mean by this?
 
-Causation takes a step further than correlation.
-> Any change in the value of one variable will cause a change in the value of another variable, which means one variable causes the other one to happen. It is also referred to as __cause and effect__.
+Causation takes correlation a step further. 
+
+> Causation is when any change in the value of one variable leads to a change in the value of another variable, which means one variable _causes_ the change in another. This is also referred to as __cause and effect__.
 
 Let's try to understand this with an example.
 
-### Consider Hidden Factors
+### Consider hidden factors
 
-Suppose for the above ice cream sales example, we now have some extra data on the number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatterplot and see that these two also related to each other. Mind blown... Is ice cream turning people into murderers?
+Suppose for the above ice cream sales example, we now have some extra data on the number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatter plot and see that these two are also related to each other. Mind blown... Is ice cream turning people into murderers?
 
 <img src="images/ice_murder.png" width="450">
 
-#### Example 1: "Ice cream sales are correlated with the number of homicides in New York" 
+#### Example 1: Ice cream sales are correlated with the number of homicides in New York 
 
 For our example, it's actually the weather as a hidden factor that is causing both these events. It is actually causing the rise in ice cream sales and homicides. As in summer people usually go out, enjoy a nice sunny day and chill themselves with ice creams. So when it’s sunny, a wide range of people are outside and there is a wider selection of victims for predators. There is no causal relationship between the ice cream and rate of homicide, sunny weather is bringing both the factors together. We can say that ice cream sales and homicide rate have a __causal relationship__ with weather.
 
@@ -241,7 +243,7 @@ Here are some other (rather funny) examples of how correlation analysis may lead
 
 So, how about this chart?
 
-The internet is full of other funny and weird correlations, you'll come across other ones if you do a quick Google search. This particular correlation between Nicolas Cage movies and drowning accidents was found on [this website](http://www.tylervigen.com/spurious-correlations). The key takeaway here is that covariance and correlation analysis should be used with care. The thing is that nowadays, you can find data on a wide variety of subjects. This means that if you search long enough, you'll find a high correlation somewhere between two completely unrelated subjects. This phenomenon is also referred to as "the law of large numbers".
+The internet is full of other funny and weird correlations. You'll come across other ones if you do a quick Google search. This particular correlation between Nicolas Cage movies and drowning accidents was found on [this website](http://www.tylervigen.com/spurious-correlations). The key takeaway here is that covariance and correlation analysis should be used with care. The thing is that nowadays, you can find data on a wide variety of subjects. This means that if you search long enough, you'll find a high correlation somewhere between two completely unrelated subjects. This phenomenon is also referred to as "the law of large numbers".
 
 #### Example 3: Our very own ice cream example
 
@@ -249,20 +251,21 @@ Our very own ice cream example in this lesson is a good example of why correlati
 
 The sales increase for Vendor A did not _cause_ a sales increase for vendor B. The hidden factor here was (clearly) the weather.
 
-What is important to note is here that, where correlation does not imply causation, *IF* there is a causal effect, there generally will be a high correlation as well. In other words:
+What is important to note is here that, although correlation does not imply causation, *IF* there is a causal effect, there generally will be a high correlation as well. In other words:
 
 > If one factor has an effect on another one (causation), there generally will be a high correlation as well. 
    Yet, this doesn't mean that a high correlation means that there is causation. 
 
 
 ## Key Takeaways
-- Correlation is dimensionless, i.e. it is a unit-free measure of the relationship between variables. 
-- Correlation is a normalized form of covariance and exists between [-1,1]
-- Correlation is not causation
+- Correlation is dimensionless, i.e. it is a unit-free measure of the relationship between variables    
+- Correlation is a normalized form of covariance and ranges between [-1,1]    
+- **Correlation is not causation** 
 
 
-**IMPORTANT NOTE:** The variance formula used in this lesson considers $X$ and $Y$ to be population variables.  For samples, we divide by (n-1), instead of n due to the principle called Bessel's correction. [Here is a mathematical proof for this](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We will visit this point again later in the course to explore it in greater detail. 
+
+**IMPORTANT NOTE:** The variance formula used in this lesson considers $X$ and $Y$ to be population variables.  For samples, we divide by $n-1$, instead of $n$ due to the principle called Bessel's correction. [Here is a mathematical proof for this](https://lazyprogrammer.me/covariance-matrix-divide-by-n-or-n-1/). We will visit this point again later in the course to explore it in greater detail. 
 
 
 ## Summary
-In this lesson, you learned how to compute the variance of random variables as a measure of deviation from the mean. Next, you learned how this measure can be used to first calculate covariance, and the correlation to analyze how two variables change together. You learned the formulas for calculating these measures and you were provided with mathematical proofs of these formulas. Next, you'll learn how you can use correlation analysis to run a __regression analysis__.
+In this lesson, you learned how to compute the variance of variables as a measure of deviation from the mean. Next, you learned how this measure can be used to first calculate covariance, and the correlation to analyze how two variables change together. You learned the formulas for calculating these measures and you were provided with mathematical proofs of these formulas. 
