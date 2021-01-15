@@ -1,4 +1,3 @@
-
 # Covariance and Correlation
 
 ## Introduction 
@@ -45,7 +44,7 @@ In some cases, you'll want to look at **two variables** to get an idea about how
 
 Covariance calculation plays a major role in a number of advanced machine learning algorithms like dimensionality reduction, predictive analyses, etc.
 
-### Calculating covariance
+### Calculating Covariance
 If you have $X$ and $Y$, two variables having $n$ elements each. You can calculate covariance ($\sigma_{xy}$) between these two variables by using the formula:
 
 $$\sigma_{XY} = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i -\mu_x)(y_i - \mu_y)$$
@@ -80,7 +79,7 @@ Recall that Vendor A sold on average 400, and Vendor B sells on average 684, con
 Using this along with the covariance formula, you can compute that the covariance between ice cream Vendor A and B sales is 106800. Now the question is, what does that mean?
 
 
-### Interpreting covariance values 
+### Interpreting Covariance Values 
 
 Covariance values range from positive infinity to negative infinity. 
 
@@ -126,16 +125,16 @@ The term "correlation" refers to a relationship or association between variables
 Correlation is the first step to understanding these relationships and subsequently building better business and statistical models.
 
 
-### Pearson's correlation coefficient ( $r$ )
+### Pearson's Correlation Coefficient ( $r$ )
 
 __Pearson Correlation Coefficient__, $r$, also called the __linear correlation coefficient__, measures the strength and the direction of a __linear relationship__ between two variables. This coefficient quantifies the degree to which a relationship between two variables can be described by a line. 
 
-**Note:** There are a [number other correlation coefficients](https://math.tutorvista.com/statistics/correlation.html),  but for now, we will focus on __Pearson correlation__ as it is the go-to correlation measure for most needs.
+**Note:** There are a [number other correlation coefficients](https://math.tutorvista.com/statistics/correlation.html),  but for now, we will focus on __Pearson correlation__ as it is the go-to correlation measure for most needs. If someone says "correlation" without further clarification, you can assume that they mean Pearson correlation.
 
 
 
 
-### Calculating correlation coefficient
+### Calculating Correlation Coefficient
 
 Pearson Correlation ($r$) is calculated using following formula :
 
@@ -151,7 +150,7 @@ So just like in the case of covariance,  $X$ and $Y$ are two variables having $n
 - $\mu_y$ = mean of the dependent variable $Y$
 - $r$ = Calculated Pearson Correlation
 
-### Interpreting correlation values
+### Interpreting Correlation Values
 
 > _The Pearson Correlation formula always gives values in a range between -1 and 1_
 
@@ -177,7 +176,7 @@ Here are some example of Pearson correlation calculations as scatter plots.
 
 Recall that $Cov(A, C)$ was higher than $Cov(A, B)$. Using the formula for correlation coefficient, vendors A and B have a correlation coefficient of 0.9888 whereas vendors A and C have a **lower** correlation coefficient of 0.8858!
 
-** Ice cream and the weather:**
+**Ice cream and the weather:**
 
 Let's take a deep dive into an ice cream vendor's sales data. Now, we're going to look at the relationship between the average daily temperature and the daily profit on 12 days in April (the degrees are on the Celsius scale):
 
@@ -204,7 +203,7 @@ And here is the same data as a scatter plot:
 Just by looking at the plot, you can easily see that hotter weather goes along with higher ice cream sales. The relationship is good but not perfect.
 The correlation for this example is 0.9575 which indicates a very strong positive relationship.
 
-## Correlation is not causation
+## Correlation Is Not Causation
 
 You may have come across the saying: **“correlation is not causation”** or **“correlation does not imply causation”**. 
 
@@ -216,7 +215,7 @@ Causation takes correlation a step further.
 
 Let's try to understand this with an example.
 
-### Consider hidden factors
+### Consider Hidden Factors
 
 Suppose for the above ice cream sales example, we now have some extra data on the number of homicide cases in New York. Out of curiosity,  we analyze sales numbers vs. homicide rate as scatter plot and see that these two are also related to each other. Mind blown... Is ice cream turning people into murderers?
 
@@ -258,7 +257,7 @@ What is important to note is here that, although correlation does not imply caus
 
 
 ## Key Takeaways
-- Correlation is dimensionless, i.e. it is a unit-free measure of the relationship between variables    
+- Covariance is dimensionless, i.e. it is a unit-free measure of the relationship between variables    
 - Correlation is a normalized form of covariance and ranges between [-1,1]    
 - **Correlation is not causation** 
 
@@ -268,4 +267,4 @@ What is important to note is here that, although correlation does not imply caus
 
 
 ## Summary
-In this lesson, you learned how to compute the variance of variables as a measure of deviation from the mean. Next, you learned how this measure can be used to first calculate covariance, and the correlation to analyze how two variables change together. You learned the formulas for calculating these measures and you were provided with mathematical proofs of these formulas. 
+In this lesson, you reviewed how to compute the variance of variables as a measure of deviation from the mean. Next, you learned how this measure can be used to first calculate covariance, and the correlation to analyze how two variables change together. You learned the formulas for calculating these measures and how they can be applied to real-world situations. 
